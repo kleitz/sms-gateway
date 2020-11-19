@@ -8,8 +8,8 @@ In case the service requires authentication, complete the Authorization field.
 
 ## Behaviour
 The app periodically makes a post to the service with a body as follows
-```json
-```json
+
+```
 [ 
 	{ id:number, status:string, resultCode: number},
 	...
@@ -20,7 +20,7 @@ ResultCode can take the values of [SmsManager](https://developer.android.com/ref
 Note that status sent does not mean that the message has been sent correctly, for this you need resultCode (for message sent successfully resultCode = -1)
 
 The application expects a response in the following format
-```json
+```
 [ 
 	{ id:number, phoneNumber: String, body : String, scheduledDate: Date},
 	....
