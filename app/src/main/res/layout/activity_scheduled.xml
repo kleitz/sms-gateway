@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/main_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/no_conversations_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/bigger_margin"
+            android:alpha="0.8"
+            android:gravity="center"
+            android:paddingLeft="@dimen/activity_margin"
+            android:paddingRight="@dimen/activity_margin"
+            android:text="@string/no_conversations_found"
+            android:textSize="@dimen/bigger_text_size"
+            android:textStyle="italic"
+            android:visibility="gone" />
+
+
+
+        <com.simplemobiletools.commons.views.MyRecyclerView
+            android:id="@+id/conversations_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollbars="none"
+            app:layoutManager="com.simplemobiletools.commons.views.MyLinearLayoutManager" />
+
+        <com.simplemobiletools.commons.views.FastScroller
+            android:id="@+id/conversations_fastscroller"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/conversations_list"
+            android:layout_alignBottom="@+id/conversations_list"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="@dimen/normal_margin">
+
+            <include layout="@layout/fastscroller_handle_vertical" />
+
+        </com.simplemobiletools.commons.views.FastScroller>
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/conversations_fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/color_primary"
+        android:src="@drawable/ic_sync_black_24dp"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

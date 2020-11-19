@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/conversation_frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="@drawable/selector">
+
+    <RelativeLayout
+        android:id="@+id/conversation_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/activity_margin"
+        android:paddingBottom="@dimen/activity_margin"
+        android:layout_marginStart="@dimen/normal_margin">
+
+
+
+        <TextView
+            android:id="@+id/conversation_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/conversation_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/activity_margin"
+            android:textSize="@dimen/big_text_size"
+            tools:text="John" />
+
+        <TextView
+            android:id="@+id/conversation_body_short"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/conversation_address"
+            android:layout_toEndOf="@+id/conversation_image"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:paddingEnd="@dimen/activity_margin"
+            android:textSize="@dimen/normal_text_size"
+            tools:text="Hey buddy!" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/conversation_body_short"
+            android:layout_marginTop="@dimen/tiny_margin"
+            android:layout_toEndOf="@+id/conversation_image">
+            <TextView
+                android:id="@+id/conversation_recived"
+                android:drawableLeft="@drawable/ic_call_received_black_24dp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.4"
+                android:textSize="@dimen/smaller_text_size"
+                tools:text="13:30" />
+            <TextView
+                android:drawableLeft="@drawable/ic_call_made_black_24dp"
+                android:gravity="center_vertical"
+                android:id="@+id/conversation_scheduled"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.4"
+                android:textSize="@dimen/smaller_text_size"
+                tools:text="13:30" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "733228923642",
+    "firebase_url": "https://sms-gateway-464ec.firebaseio.com",
+    "project_id": "sms-gateway-464ec",
+    "storage_bucket": "sms-gateway-464ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733228923642:android:ca355694647f7013246743",
+        "android_client_info": {
+          "package_name": "com.terminuslabs.smsmessenger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "733228923642-mtfcdb1uu7av6ptb2duob9soopubku8m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPGDb4ur02VBxGcBCp3RscqRkWCON60kc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "733228923642-mtfcdb1uu7av6ptb2duob9soopubku8m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
